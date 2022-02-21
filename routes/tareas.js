@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const tareaController = require('../controllers/tareaController');
+const productoController = require('../controllers/productoController');
 const auth = require('../middleware/auth');
 const { check } = require('express-validator');
 
@@ -31,6 +32,11 @@ router.put('/:id',
 router.delete('/:id', 
     auth,
     tareaController.eliminarTarea
+);
+
+// Obtener todos los productos 
+router.get('/productos',
+    productoController.obtenerProductos
 );
 
 module.exports = router;
