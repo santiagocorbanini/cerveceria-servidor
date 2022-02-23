@@ -17,6 +17,7 @@ exports.obtenerProductos = async (req, res) => {
                     name: tarea.nombre, 
                     price: tarea.precio,
                     stock: tarea.stock,
+                    image: tarea.imagen,
                     category: tarea.proyecto
                 });
             });
