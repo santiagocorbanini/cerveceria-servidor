@@ -71,7 +71,7 @@ exports.obtenerTareas = async (req, res) => {
 exports.actualizarTarea = async (req, res ) => {
     try {
         // Extraer el proyecto y comprobar si existe
-        const { proyecto, nombre, estado, stock, precio } = req.body;
+        const { proyecto, nombre, estado, stock, precio, imagen } = req.body;
 
 
         // Si la tarea existe o no
@@ -94,6 +94,7 @@ exports.actualizarTarea = async (req, res ) => {
         if(estado) nuevaTarea.estado = estado;
         if(precio) nuevaTarea.precio = precio;
         if(stock) nuevaTarea.stock = stock;
+        if(imagen) nuevaTarea.imagen = imagen;
 
         // Guardar la tarea
         tarea = await Tarea.findOneAndUpdate({_id : req.params.id }, nuevaTarea, { new: true } );

@@ -20,6 +20,10 @@ const TareaSchema = mongoose.Schema({
         type: Boolean,
         default: false
     },
+    imagen: {
+        type: String,
+        required: false
+    },
     creado: {
         type: Date,
         default: Date.now()
