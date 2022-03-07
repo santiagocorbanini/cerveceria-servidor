@@ -36,9 +36,4 @@ router.delete('/:id',
     proyectoController.eliminarProyecto
 );
 
-// Obtener todos los proyectos
-router.get('/categorias', 
-    proyectoController.obtenerCategorias
-)
-
 module.exports = router;
